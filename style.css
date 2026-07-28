@@ -1,0 +1,190 @@
+/* RESET E VARIÁVEIS DE CORES */
+:root {
+  --cor-fundo-escuro: #0a0a12;
+  --cor-principal: #ff4757;
+  --cor-hover: #ff6b81;
+  --cor-texto: #ffffff;
+  --cor-subtexto: #a0a0b8;
+  --fonte-titulo: 'Cinzel', serif;
+  --fonte-corpo: 'Poppins', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fonte-corpo);
+  background-color: var(--cor-fundo-escuro);
+  color: var(--cor-texto);
+  overflow-x: hidden;
+}
+
+/* TELA DE CAPA */
+.capa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: radial-gradient(circle at center, #2a1b40 0%, #0a0a12 100%);
+  position: relative;
+}
+
+/* CARTÃO CENTRALIZADO */
+.cartao-capa {
+  max-width: 650px;
+  text-align: center;
+  padding: 40px 30px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  animation: surgimento 1s ease-out;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--cor-principal);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.titulo-jogo {
+  font-family: var(--fonte-titulo);
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 15px;
+  background: linear-gradient(180deg, #ffffff 0%, #c4b5fd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.subtitulo {
+  font-size: 1.05rem;
+  color: var(--cor-subtexto);
+  margin-bottom: 35px;
+  line-height: 1.6;
+}
+
+/* BOTÃO INICIAR */
+#btn-iniciar {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 36px;
+  font-family: var(--fonte-corpo);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, var(--cor-principal), #d63031);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(255, 71, 87, 0.4);
+  transition: all 0.3s ease;
+}
+
+#btn-iniciar:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(255, 71, 87, 0.6);
+  background: linear-gradient(135deg, var(--cor-hover), var(--cor-principal));
+}
+
+#btn-iniciar:active {
+  transform: translateY(0);
+}
+
+.icone-seta {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+#btn-iniciar:hover .icone-seta {
+  transform: translateX(5px);
+}
+
+/* TELA DA HISTÓRIA */
+.historia {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  animation: surgimento 0.8s ease-out;
+}
+
+.cartao-historia {
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.cartao-historia h2 {
+  font-family: var(--fonte-titulo);
+  margin-bottom: 20px;
+  color: var(--cor-principal);
+}
+
+.cartao-historia p {
+  line-height: 1.8;
+  color: #e0e0e0;
+  margin-bottom: 30px;
+}
+
+.opcoes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn-opcao {
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: var(--fonte-corpo);
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.btn-opcao:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--cor-principal);
+}
+
+/* REGRAS E ANIMAÇÕES */
+.escondido {
+  display: none !important;
+}
+
+@keyframes surgimento {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 600px) {
+  .titulo-jogo {
+    font-size: 2.2rem;
+  }
+}

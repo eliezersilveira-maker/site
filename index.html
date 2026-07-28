@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Lenda do Reino Perdido</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Poppins:wght@300;400;600&display=style" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main id="tela-inicial" class="capa">
+    <div class="cartao-capa">
+      <span class="tag">Uma aventura interativa</span>
+      <h1 class="titulo-jogo">A Lenda do Reino Perdido</h1>
+      <p class="subtitulo">Segredos antigos aguardam no escuro. Você tem coragem para tomar as decisões certas?</p>
+      
+      <button id="btn-iniciar" onclick="iniciarJogo()">
+        <span>Iniciar Aventura</span>
+        <svg class="icone-seta" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+      </button>
+    </div>
+  </main>
+
+  <section id="tela-historia" class="historia escondido">
+    <div class="cartao-historia">
+      <h2>Capítulo 1: O Despertar</h2>
+      <p>Você acorda na entrada de uma floresta antiga cobertas por uma névoa densa. Ao seu lado, há uma lanterna apagada e um mapa rasgado...</p>
+      
+      <div class="opcoes">
+        <button class="btn-opcao">Acender a lanterna</button>
+        <button class="btn-opcao">Seguir no escuro</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
